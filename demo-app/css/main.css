@@ -7,7 +7,7 @@
     overflow: hidden;
     text-align: center;
     font-size: 1.5rem;
-    font-family: "Roboto", sans-serif;
+    font-family: "Work Sans", sans-serif;
   }
   
   .login {
@@ -69,7 +69,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
   @keyframes loading {
     0% {
       opacity: 0;
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
     100% {
       opacity: 1;
@@ -227,15 +227,15 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
     padding: 0;
     margin: 0.5em auto;
   }
-.script{background-color:#efefef; background-image:url(../img/script.jpg); backgrond-position: 50% 50%; background-size: cover; )}
+.script{background-color:#ddd; )}
   .script-block input{position:absolute; z-index:999; display:block; width: 100%; top:0; right:0; bottom:0; left:0; opacity:0; cursor:pointer; appearance:none;}
 
-  .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;   background-color:#ddd}
-  .script-block input:checked ~ div{max-height:30em;     background-color:#fff; overflow:hidden;transform:scale(1.05); box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.15)}
+  .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;  color:#444; background-color:#e5e5e5}
+  .script-block input:checked ~ div{max-height:30em;  color:black;background-color:#fff; transition: transform .24s cubic-bezier(.7,.2,.2,1.2);overflow:hidden;transform:scale(1.05); box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.15)}
 
 
   .script-block > div p{margin-top:0;}
-  .script-block > div{ text-align:left;  padding:1rem;transition: all .4s cubic-bezier(.7,.2,.2,1.2); min-height:3em; box-shadow: 0 0.1em .5em rgba(0, 0, 0, 0.06); font-size: .8em  }
+  .script-block > div{ border-radius: 1.5rem;text-align:left;  padding:1rem 2rem; min-height:3em; box-shadow:none; font-size: .8em  }
 
 
   .signature-pad {
@@ -385,6 +385,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
   .logobuild span:nth-child(3),
   .logobuild span:nth-child(4){display:none}
 
-#d-login:checked  ~ .logobuild span:nth-child(2){display:block}
-#d-script-1:checked  ~ .logobuild span:nth-child(3),
-#d-script-2:checked  ~ .logobuild span:nth-child(4){display:inline-block;}
+  #d-login:checked  ~ .logobuild span:nth-child(2),
+#d-script-1:checked  ~ .logobuild span:nth-child(2){display:block}
+#d-script-2:checked  ~ .logobuild span:nth-child(3),
+#d-drone:checked  ~ .logobuild span:nth-child(4){display:inline-block;}
