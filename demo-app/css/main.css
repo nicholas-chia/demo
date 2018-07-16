@@ -22,12 +22,13 @@
     font-family: inherit;
     appearance: none;
     display: inline-block;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    background-color: transparent;
+box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
     cursor: pointer;
-    border-radius: 0.5em;
+    border-radius: 1.5em;
     outline: 0;
-    user-select: none;
+    user-select: none; font-size:.8em;
   }
   label.button:hover,
   button:hover {
@@ -47,11 +48,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto;
+    overflow-y: auto;
     height: 100%;
     width: 100%;
     z-index: -1;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    padding-top:4rem;
   }
   
   #v-sold:checked ~ section.sold,
@@ -73,6 +75,8 @@
     }
   }
   /*SIGN IN PAGE*/
+
+#v-login:checked ~ .login
   .bokeh {
     z-index: -1;
     height: 100vh;
@@ -88,46 +92,46 @@
     backface-visibility: hidden;
   }
   
-  .bokeh circle {
+  #v-login:checked ~ .login  .bokeh circle {
     animation: rotate 6s linear infinite;
     fill: #124;
     opacity: 0.43;
     transform-origin: 50%;
   }
-  .bokeh circle:nth-child(2n) {
+  #v-login:checked ~ .login  .bokeh circle:nth-child(2n) {
     fill: #614;
     transform-origin: 20% 110%;
     animation-delay: -3s;
     animation-duration: 4.1316s;
     opacity: 0.2;
   }
-  .bokeh circle:nth-child(3n) {
+  #v-login:checked ~ .login  .bokeh circle:nth-child(3n) {
     opacity: 0.65;
     fill: #469;
     transform-origin: 70% 30%;
     animation-delay: -1.5s;
     animation-duration: 7.9998s;
   }
-  .bokeh circle:nth-child(4n) {
+  #v-login:checked ~ .login  .bokeh circle:nth-child(4n) {
     fill: #c63;
     transform-origin: 110% 70%;
     animation-delay: -2s;
     animation-duration: 4.77996s;
   }
-  .bokeh circle:nth-child(5n) {
+  #v-login:checked ~ .login  .bokeh circle:nth-child(5n) {
     fill: #266;
     transform-origin: 30% 40%;
   }
-  .bokeh circle:nth-child(6n) {
+  #v-login:checked ~ .login  .bokeh circle:nth-child(6n) {
     fill: #124;
     transform-origin: -10% 80%;
     animation-delay: -7.8s;
   }
-  .bokeh circle:nth-child(7n) {
+  #v-login:checked ~ .login  .bokeh circle:nth-child(7n) {
     fill: #614;
     transform-origin: 70% -10%;
   }
-  .bokeh circle:nth-child(8n) {
+  #v-login:checked ~ .login  .bokeh circle:nth-child(8n) {
     fill: #c63;
     transform-origin: -30% 50%;
     animation-delay: -2.4s;
@@ -210,23 +214,23 @@
     position:relative;
     max-width: 30em;
     padding: 0;
- 
     margin: 0.5em auto;
   }
 .script{background-color:#efefef}
   .script-block input{position:absolute; z-index:999; display:block; width: 100%; top:0; right:0; bottom:0; left:0; opacity:0; cursor:pointer; appearance:none;}
 
-  .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;   background-color:#5f5f5}
-  .script-block input:checked ~ div{max-height:30em;   background-color:#fff; overflow:hidden;transform:scale(1.05); box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.15)}
+  .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;   background-color:#f6f6f6}
+  .script-block input:checked ~ div{max-height:30em;     background-color:#fff; overflow:hidden;transform:scale(1.05); box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.15)}
+
 
   .script-block > div p{margin-top:0;}
-  .script-block > div{ text-align:left;  padding:1rem;transition: all .4s cubic-bezier(.7,.2,.2,1.2); min-height:3em; box-shadow: 0 0.1em .5em rgba(0, 0, 0, 0.06);
+  .script-block > div{ text-align:left;  padding:1rem;transition: all .4s cubic-bezier(.7,.2,.2,1.2); min-height:3em; box-shadow: 0 0.1em .5em rgba(0, 0, 0, 0.06); font-size: .8em  }
 
-font-size: .8em  }
+
   .signature-pad {
     width: 100%;
-    background-color: #eee;
-    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.10);
+   
+    
   }
   
   .sign {
@@ -236,12 +240,10 @@ font-size: .8em  }
   .no-touch .signature-pad {
     box-shadow: 0 0.2em 2em rgba(0, 0, 0, 0);
     transition: all 0.3s ease;
-    border: 0.1em solid rgba(0, 0, 0, 0.1);
-    background-color: transparent;
+    background-color: #ddd;
   }
   
   .no-touch .signature-pad:hover {
-    border: 0.1em solid transparent;
     box-shadow: 0 0.2em 2em rgba(0, 0, 0, 0.3);
     background-color: #eee;
     transform: scale(1);
@@ -256,7 +258,7 @@ font-size: .8em  }
   .sig-pad button {
     color: #444;
     position: absolute;
-    top: 0;
+    top: 0;box-shadow:none;
     right: 0;
     background-color: transparent;
   }
@@ -332,11 +334,10 @@ font-size: .8em  }
     display: none;
   }
   
-  .options{margin-bottom:2rem; font-size: 0.8em;}
-    .options input{display:none;}
-    .options label{ display:inline-block; cursor:pointer; transition: .5s ease;  padding: 1rem 2rem; background-color:rgba(230,230,230,0.5); border-radius: 2rem; text-transform:lowercase;}
-    .options input:checked + label{background-color:#616; color: white;}
-
+  .options{margin-bottom:2rem; font-size: 1em}
+    .options input{display:none; }
+    .options input + label{transform: scale(.95); display:inline-block; cursor:pointer;  font-size:.8em; transition: .5s ease;  padding: 1rem 2rem; background-color:rgba(230,230,230,0.5); border-radius: 2rem; text-transform:lowercase; }
+    .options input:checked + label{transform: scale(.99);background-color:#616; color: white; }
 
     #d-script-1:not(:checked) ~ .sign .options [for="op2"],
     #d-script-2:not(:checked) ~ .sign .options [for="op3"]{display:none}
@@ -350,4 +351,27 @@ font-size: .8em  }
   }
   
 
-  .button.logout{background-color:transparent; position:fixed; top: 0; right:10rem; opacity:.5}
+  .button.logout{background-color:transparent; position:fixed; top: 0; right:10rem; opacity:.5; box-shadow:none;}
+
+
+  .logobuild{position:fixed; top:0; left:0; pointer-events: none; z-index:999; text-align:left;
+  padding: 1rem;   color:#013;
+  }
+
+  .logobuild > span:first-child{font-size: 2rem;font-weight: 900; display:block; margin:0;}
+  .logobuild > span:nth-child(2){font-size: .8rem;font-weight: 400; display:block; margin:0; margin-bottom:-.5em;}
+  .logobuild > span:nth-child(3),
+  .logobuild > span:nth-child(4){font-size: .65rem; letter-spacing:.1em; text-transform:uppercase;font-weight: 400; margin:0;  display:inline-block;}
+
+
+.logobuild{color:white}
+  #v-script:checked ~   .logobuild{color:#234}
+  #v-sign:checked ~   .logobuild{color:#234; opacity:0.2}
+
+  .logobuild span:nth-child(2),
+  .logobuild span:nth-child(3),
+  .logobuild span:nth-child(4){display:none}
+
+#d-login:checked  ~ .logobuild span:nth-child(2){display:block}
+#d-script-1:checked  ~ .logobuild span:nth-child(3),
+#d-script-2:checked  ~ .logobuild span:nth-child(4){display:inline-block;}
