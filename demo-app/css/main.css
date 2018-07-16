@@ -230,7 +230,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
 .script{background-color:#efefef; background-image:url(../img/script.jpg); backgrond-position: 50% 50%; background-size: cover; )}
   .script-block input{position:absolute; z-index:999; display:block; width: 100%; top:0; right:0; bottom:0; left:0; opacity:0; cursor:pointer; appearance:none;}
 
-  .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;   background-color:#f6f6f6}
+  .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;   background-color:#ddd}
   .script-block input:checked ~ div{max-height:30em;     background-color:#fff; overflow:hidden;transform:scale(1.05); box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.15)}
 
 
