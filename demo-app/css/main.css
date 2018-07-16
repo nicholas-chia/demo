@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .login {
+    background-color: #013;
+    color: white;
+  }
+  
+  label.button,
+  button {
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    appearance: none;
+    display: inline-block;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 0.5em;
+    outline: 0;
+    user-select: none;
+  }
+  label.button:hover,
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  
+  label.button {
+    margin-top: .25em;
+  }
+  
+  section {
+    transition: all 0.5s ease;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    padding: 1rem;
+  }
+  
+  #v-sold:checked ~ section.sold,
+  #v-login:checked ~ section.login,
+  #v-script:checked ~ section.script,
+  #v-sign:checked ~ section.sign {
+    z-index: 2;
+    animation: loading 0.4s ease forwards;
+  }
+  
+  @keyframes loading {
+    0% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  /*SIGN IN PAGE*/
+  .bokeh {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #124;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: blur(50px);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  .bokeh circle {
+    animation: rotate 6s linear infinite;
+    fill: #124;
+    opacity: 0.43;
+    transform-origin: 50%;
+  }
+  .bokeh circle:nth-child(2n) {
+    fill: #614;
+    transform-origin: 20% 110%;
+    animation-delay: -3s;
+    animation-duration: 4.1316s;
+    opacity: 0.2;
+  }
+  .bokeh circle:nth-child(3n) {
+    opacity: 0.65;
+    fill: #469;
+    transform-origin: 70% 30%;
+    animation-delay: -1.5s;
+    animation-duration: 7.9998s;
+  }
+  .bokeh circle:nth-child(4n) {
+    fill: #c63;
+    transform-origin: 110% 70%;
+    animation-delay: -2s;
+    animation-duration: 4.77996s;
+  }
+  .bokeh circle:nth-child(5n) {
+    fill: #266;
+    transform-origin: 30% 40%;
+  }
+  .bokeh circle:nth-child(6n) {
+    fill: #124;
+    transform-origin: -10% 80%;
+    animation-delay: -7.8s;
+  }
+  .bokeh circle:nth-child(7n) {
+    fill: #614;
+    transform-origin: 70% -10%;
+  }
+  .bokeh circle:nth-child(8n) {
+    fill: #c63;
+    transform-origin: -30% 50%;
+    animation-delay: -2.4s;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #d-login,
+  #d-script-1,
+  #d-script-2,
+  #d-drone {
+    position: absolute;
+    z-index: 9;
+    appearance: none;
+    border: 0;
+    background-color: rgba(190, 190, 190, 0.25);
+    width: 5rem;
+    height: 5rem;
+    display: block;
+    outline: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  #d-login:checked,
+  #d-script-1:checked,
+  #d-script-2:checked,
+  #d-drone:checked {
+    background-color: #c00;
+  }
+  
+  #d-login {
+    top: 0;
+    left: 0;
+  }
+  
+  #d-script-1 {
+    right: 0;
+    top: 0;
+  }
+  
+  #d-script-2 {
+    bottom: 0;
+    right: 0;
+  }
+  
+  #d-drone {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .button.fake-social {
+    background-color: #27a;
+    color: white;
+    box-shadow: inset 0 0 0 0.05em rgba(255, 255, 255, 0.2), 0 0 0 0.1em rgba(0, 0, 0, 0.2);
+  }
+  .button.fake-social:hover {
+    background-color: #38b;
+  }
+  
+  /*SCRIPT PAGE*/
+  .script-block {
+    max-width: 30em;
+    padding: 0;
+    min-height: 3em;
+    box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.1);
+    margin: 0.5em auto;
+  }
+  
+  .signature-pad {
+    width: 100%;
+    background-color: #eee;
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.34);
+  }
+  
+  .sign {
+    background-color: #ccc;
+  }
+  
+  .no-touch .signature-pad {
+    box-shadow: 0 0.2em 2em rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+    border: 0.1em solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+  }
+  
+  .no-touch .signature-pad:hover {
+    border: 0.1em solid transparent;
+    box-shadow: 0 0.2em 2em rgba(0, 0, 0, 0.3);
+    background-color: #eee;
+    transform: scale(1);
+  }
+  
+  .sig-pad {
+    position: relative;
+    max-width: 25em;
+    margin: 1em auto;
+  }
+  
+  .sig-pad button {
+    color: #444;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+  }
+  
+  /*pharma login SSO interactivity*/
+  #d-login:not(:checked) ~ section .pharma-login {
+    display: none;
+  }
+  
+  #d-login:checked ~ section .pharma-login {
+    display: inline-block;
+  }
+  
+  /*interactivity*/
+  #d-script-1:not(:checked) ~ section .pharma-script,
+  #d-script-2:not(:checked) ~ section .partner-script {
+    overflow: hidden;
+    min-height: 0em;
+    max-height: 0;
+    opacity: 0;
+  }
+  
+  #d-script-1:checked ~ section .pharma-script,
+  #d-script-2:checked ~ section .partner-script {
+    display: block;
+    max-height: 20em;
+    transition: all 0.5s ease;
+  }
+  
+  .yesdrone {
+    display: none;
+  }
+  
+  #d-drone:not(:checked) ~ section .yesdrone {
+    display: none;
+  }
+  
+  #d-drone:not(:checked) ~ section .nodrone {
+    display: inline;
+  }
+  
+  #d-drone:checked ~ section .yesdrone {
+    display: inline;
+  }
+  
+  #d-drone:checked ~ section .nodrone {
+    display: none;
+  }
+  
+  .method {
+    max-width: 5em;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #d-drone:not(:checked) ~ section svg .drone {
+    display: none;
+  }
+  
+  #d-drone:checked ~ section svg .drone {
+    display: block;
+  }
+  
+  #d-drone:checked ~ section svg .truck {
+    display: none;
+  }
+  
+  .method .drone {
+    display: none;
+  }
+  
+  .options {
+    font-size: 0.8em;
+  }
+  
+  .sold {
+    background-color: #013;
+    color: white;
+  }
+  
