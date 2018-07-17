@@ -231,11 +231,11 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
   .script-block input{position:absolute; z-index:999; display:block; width: 100%; top:0; right:0; bottom:0; left:0; opacity:0; cursor:pointer; appearance:none;}
 
   .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;  color:#444; background-color:#e5e5e5}
-  .script-block input:checked ~ div{max-height:30em;  color:black;background-color:#fff; transition: transform .24s cubic-bezier(.7,.2,.2,1.2);overflow:hidden;transform:scale(1.05); box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.15)}
+  .script-block input:checked ~ div{max-height:30em;  color:black;background-color:#fff; overflow:hidden;transform:scale(1.05); box-shadow: 0 0.23em 1em rgba(0, 0, 0, 0.15)}
 
-
+.bionode-block div{background-color:purple; color:white;}
   .script-block > div p{margin-top:0;}
-  .script-block > div{ border-radius: 1.5rem;text-align:left;  padding:1rem 2rem; min-height:3em; box-shadow:none; font-size: .8em  }
+  .script-block > div{ border-radius: .5rem;transition: all .24s cubic-bezier(.7,.2,.2,1.2);text-align:left;  padding: 2rem; min-height:3em; box-shadow:none; font-size: .8em  }
 
 
   .signature-pad {
@@ -295,12 +295,13 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
     opacity: 0;
   }
   
+  .script{transition: all 0.5s ease;}
   #d-script-1:checked ~ section .pharma-script,
   #d-script-2:checked ~ section .partner-script {
     display: block;
     max-height: 20em;
     animation: showblock .36s ease forwards;
-    transition: all 0.5s ease;
+    
   }
   
   @keyframes showblock {
@@ -350,7 +351,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
   
   .options{margin-bottom:2rem; font-size: 1em; }
     .options input{display:none; }
-    .options input + label{transform: scale(.95); display:inline-block; cursor:pointer;  font-size:.8em; transition: .5s ease;  padding: 1rem 2rem; background-color:rgba(230,230,230,0.5); border-radius: 2rem; text-transform:lowercase; }
+    .options input + label{transform: scale(.95); display:inline-block; cursor:pointer;  font-size:.8em; transition: all .5s ease;  padding: 1rem 2rem; background-color:rgba(230,230,230,0.5); border-radius: 2rem; text-transform:lowercase; }
     .options input:checked + label{transform: scale(.99);background-color:#616; color: white; }
 
     #d-script-1:not(:checked) ~ .sign .options [for="op2"],
