@@ -231,7 +231,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
     padding: 0;
     margin: 0.5em auto;
   }
-.script{background-color:#ddd; )}
+.script{background-color:#202; )}
   .script-block input{position:absolute; z-index:999; display:block; width: 100%; top:0; right:0; bottom:0; left:0; opacity:0; cursor:pointer; appearance:none;}
 
   .script-block input:not(:checked) ~ div{max-height:0; overflow:hidden;  color:#444; background-color:#e5e5e5}
@@ -239,7 +239,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
 
 .bionode-block div{background-color:purple; color:white;}
   .script-block > div p{margin-top:0;}
-  .script-block > div{transition: all .24s cubic-bezier(.7,.2,.2,1.2);text-align:left;  padding: 2rem; min-height:4em; box-shadow:none; font-size: .8em  }
+  .script-block > div{transition: all .24s cubic-bezier(.7,.2,.2,1.2);text-align:left;  padding: 2rem; min-height:5rem; box-shadow:none; font-size: .8em  }
 
 
   .signature-pad {
@@ -426,7 +426,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
 .bigpharm-block input:not(:checked) ~ div{background-color:#69c; color: #ddd;;}
 
 
-.signatory{border-radius: 0 !important; position:fixed; bottom:0; left:0; right:0; height: 5rem; background-color: #717 !important; color: white; font-size: 1.3rem; text-transform: uppercase;}
+.signatory{border-radius: 0 !important; position:fixed; bottom:0; left:0; right:0; height: 5rem; line-height: 3rem; background-color: #717 !important; color: white; font-size: 1.3rem; font-weight: 500; font-size: 1.8rem !important;}
 
 .signatory:hover{  background-color: #818 !important}
 
@@ -448,3 +448,5 @@ label.pharma-login{background-color:#fff; color: black}
 
 
 h2{font-weight: 200; font-size: 4rem;  margin:0; color:#737}
+
+h3{margin:-.4em 0 1em 0; font-weight: 700; font-size: 2rem;}
