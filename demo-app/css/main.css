@@ -418,6 +418,9 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
 
 
 
+.bionode-block input:not(:checked) ~ div{ color: #737;;}
+.bionode-block input:checked ~ div{; color: #515;;}
+
 .briefing-block input:not(:checked) ~ div{background-color:#456; color: #ddd;;}
 
 .briefing-block input:checked ~ div
