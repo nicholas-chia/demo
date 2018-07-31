@@ -249,7 +249,7 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
   }
   
   .sign {
-    background-color: #eee;
+    background-color: #fff;
     background-position: 50% 50%;
     background-size: cover;
   }
@@ -359,7 +359,8 @@ box-shadow: inset 0 0 0 .1em rgba(0,0,0,0.1);
     display: inline-block;
   }
   
-  
+  #d-drone:checked ~ section     img.drone{width: 15em; position: absolute; top: 5rem; left:0; z-index:-1}
+
   .options{margin-bottom:2rem; font-size: 1em; }
     .options input{display:none; }
     .options input + label{transform: scale(.95); display:inline-block; cursor:pointer;  font-size:.8em; transition: all .5s ease;  padding: 1rem 2rem; background-color:rgba(230,230,230,0.5); border-radius: 2rem; text-transform:lowercase; }
