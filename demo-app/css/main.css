@@ -80,10 +80,12 @@ section {
   padding: 7rem 1rem;
 }
 
-#v-sold:checked~section.sold,
-#v-login:checked~section.login,
+section.login{z-index:1; animation:none}
+
+  #v-sold:checked~section.sold,
+ #v-login:checked~section.login,
 #v-script:checked~section.script,
-#v-sign:checked~section.sign {
+  #v-sign:checked~section.sign {
   z-index: 2;
   animation: loading .1s ease forwards;
 }
@@ -544,8 +546,6 @@ section {
 .options input:checked+label:before {
   background-color: currentcolor;
 }
-
-#d-script-1:not(:checked) ~ .bionode-block{display:none}
 
 
 #d-script-1:not(:checked)~.sign .options [for="op2"] {
