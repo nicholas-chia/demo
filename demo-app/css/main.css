@@ -11,6 +11,25 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+
+#d-login,
+#d-script-1,
+#d-script-2,
+#d-drone {
+  transition: all.2s ease;
+  position: absolute;
+  z-index: 9;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  width: 8rem;
+  height: 8rem;
+  display: block;
+  outline: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 .login {
   background-color: #013;
   color: white;
@@ -162,31 +181,11 @@ section {
   }
 }
 
-#d-login,
-#d-script-1,
-#d-script-2,
-#d-drone {
-  position: absolute;
-  z-index: 9;
-  appearance: none;
-  border: 0;
-  background-color: transparent;
-  width: 8rem;
-  height: 8rem;
-  display: block;
-  outline: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-#d-login:checked,
-#d-script-1:checked,
-#d-script-2:checked,
-#d-drone:checked {}
+ 
 
 .indicators {
   position: fixed;
-  lrft: 4rem;
+  left: 1rem;
   bottom: 1em;
   width: 2em;
   pointer-events: none;
@@ -200,8 +199,7 @@ section {
   height: 1rem;
   display: inline-block;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 .1em rgba(90, 90, 90, 0.35;
-  )
+  box-shadow: inset 0 0 0 .1em rgba(90, 90, 90, 0.35;)
 }
 
 .indicators>div:nth-child(4) {
@@ -277,12 +275,11 @@ section {
   position: relative;
   max-width: 30em;
   padding: 0;
-  margin: 0.5em auto;
+  margin: 0.75em auto;
 }
 
 .script {
   background-color: #111;
-  )
 }
 
 .script-block input {
@@ -548,14 +545,15 @@ section {
   background-color: currentcolor;
 }
 
-#d-script-1:not(:checked)~.sign .options [for="op2"],
-#d-script-2:not(:checked)~.sign .options [for="op3"] {
-  display: none
+#d-script-1:not(:checked) ~ .bionode-block{display:none}
+
+
+#d-script-1:not(:checked)~.sign .options [for="op2"] {
+  display: none;
 }
 
-#d-script-1:checked~.sign .options [for="op2"],
-#d-script-2:checked~.sign .options [for="op3"] {
-  display: inline-block
+#d-script-1:checked~.sign .options [for="op2"] {
+  display: inline-block;
 }
 
 .sold {
@@ -572,7 +570,7 @@ section {
   background-color: transparent;
   position: fixed;
   top: .5rem;
-  right: 10rem;
+  right: 8rem;
   opacity: .5;
   box-shadow: none;
   z-index: 999;
@@ -655,25 +653,20 @@ section {
   display: none
 }
 
+#d-script-2:checked~.logobuild path:nth-child(3),
+#d-drone:checked~.logobuild path:nth-child(4),
 #d-login:checked~.logobuild path:nth-child(2),
 #d-script-1:checked~.logobuild path:nth-child(2) {
   display: block
 }
-
-#d-script-2:checked~.logobuild path:nth-child(3),
-#d-drone:checked~.logobuild path:nth-child(4) {
-  display: block;
-}
+ 
 
 .bionode-block input:not(:checked)~div {
   color: #737;
-  ;
 }
 
 .bionode-block input:checked~div {
-  ;
   color: #515;
-  ;
 }
 
 .briefing-block input:not(:checked)~div {
@@ -702,7 +695,6 @@ section {
 .bigpharm-block input:not(:checked)~div {
   background-color: #7ad;
   color: #000;
-  ;
 }
 
 .bigpharm-block input:checked~div {
