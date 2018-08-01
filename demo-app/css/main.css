@@ -711,7 +711,7 @@ section.login{z-index:1; animation:none}
   right: 0;
   height: 5rem;
   line-height: 3rem;
-  background-color: #717 !important;
+  background-color: #d25 !important;
   color: white;
   font-size: 1.3rem;
   font-weight: 500;
@@ -785,3 +785,5 @@ h3 {
 section>p {
   color: #666
 }
+
+.primary{background-color:#d25 !important; color:white; box-shadow: 0 0 0 .1em currentcolor }
