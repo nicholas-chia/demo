@@ -9,7 +9,7 @@
 <a target="_blank"  href="https://fuse-online.cloudapps.rhdemo.io" class="fuse-online">Fuse Online</a>
 <a target="_blank"  href="https://3scale-admin.cloudapps.rhdemo.io" class="scale admin">Admin</a>
 <a target="_blank"  href="https://3scale.cloudapps.rhdemo.io" class="scale developer">Developer</a>
-<a target="_blank"  href="http://rhpam-rhpamcentr-rhpam-admin.cloudapps.rhdemo.io/" class="pam">Process Automation Mgr</a>  
+<a target="_blank"  href="http://rhpam-rhpamcentr-rhpam-admin.cloudapps.rhdemo.io/" class="pam">PAM</a>  
 <a target="_blank"  href="https://tower.bionode.io" class="tower">Ansible Tower</a>
 <a target="_blank"  href="https://access.redhat.com/insights/overview" class="insights">Insights</a>
 </div>
@@ -50,37 +50,38 @@ body {
   width: 100%;
   color: #c00;
   opacity:0.5;
-  padding-top: 8vh;
+  padding-top: 9vh;
   text-decoration: none;
   align-self: stretch;
   align-content: center;
   transform: scale(1) translate(0);
-background-position:50% 65%; background-size: 65%;
+  background-position:50% 65%; background-size: 65%;
 }
 
 a.openshift{background-image:url(img/openshift.svg)}
-a.tower{background-image:url(img/tower.svg)}
-a.scale{background-image:url(img/scale.svg)}
-a.fuse{background-image:url(img/fuse.svg); background-size: 50%;}
+a.tower{background-image:url(img/tower.svg);background-size: 53%;}
+a.scale{background-image:url(img/scale.svg);background-size: 85%;}
+a.fuse{background-image:url(img/fuse.svg); background-size: 47%;}
 a.fuse-online{background-image:url(img/fuse-online.svg)}
-a.pam{background-image:url(img/pam.svg)}
-a.insights{background-image:url(img/insights.svg);background-size: 50%;}
+a.pam{background-image:url(img/pam.svg);background-size: 85%;}
+a.insights{background-image:url(img/insights.svg);background-size: 45%;}
+a.sso{background-image:url(img/sso.svg);background-size: 70%;}
 
 
 .grid > a:hover, .grid > a:focus {
   opacity:1;
-  background-color: #333;
+  background-color: #222;
   transition: transform 0.24s cubic-bezier(0.2, 0.1, 0.1, 1.5);
   color: #c00;
   position: relative;
   z-index: 9;
-  transform: scale(1.05);
+  transform: scale(1.025);
   box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.9);
 }
 .grid > a:focus {
-  background-color: #666;
+  background-color: #181818;
   outline: 0;
-  z-index: 99999;
+  z-index: 8;
 }
 
 @media (orientation:portrait){
