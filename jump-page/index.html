@@ -96,7 +96,7 @@ a.slides{background-image:url(img/slides.svg);background-size: 60%;}
 
 
 .grid > a{overflow:hidden;}
-.grid > a:before{content:""; transition: all .25s ease;  display:block; background-color: #900; opacity:.83; position:absolute;  top:0; left:0; width: 100%; height: 100%; transform: translate(-150%,0) skew(-45deg)}
+.grid > a:before{content:""; transition: all .25s ease;  display:block; background-color: #900;  position:absolute;  top:0; left:0; width: 100%; height: 100%; transform: translate(-150%,0) skew(-45deg)}
 
 
 
@@ -108,6 +108,11 @@ a.slides{background-image:url(img/slides.svg);background-size: 60%;}
 .grid > a:hover:before{transform: translate(150%,0) skew(-45deg); transition-duration: .6s }
 
 .unique:before{background-color:#555 !important;   }
+
+
+.demo:before{background-color:#345 !important;   }
+.demo:hover{background-color:#ff2273 !important; color:black !important  }
+
 .nocp:after, .unique:after{display:none !important}
 </style>
 
