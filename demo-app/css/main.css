@@ -275,7 +275,7 @@ section.login{z-index:1; animation:none}
 
 .script-block {
   position: relative;
-  max-width: 30em;
+  max-width: 50em;
   padding: 0;
   margin: 0.75em auto;
 }
@@ -596,14 +596,14 @@ section.login{z-index:1; animation:none}
   fill: currentcolor;
 }
 
-.logobuild path:first-child {
+.logobuild path:first-child, .logobuild path:nth-child(2) {
   font-size: 2rem;
   font-weight: 900;
   display: block;
   margin: 0;
 }
 
-.logobuild path:nth-child(2) {
+.logobuild path:nth-child(3) {
   font-size: 1rem;
   font-weight: 400;
   inline-display: block;
@@ -619,6 +619,9 @@ section.login{z-index:1; animation:none}
   margin: 0;
   display: inline-block;
 }
+
+
+
 
 #v-script:checked~.script:before,
 #v-sign:checked~.sign:before {
@@ -647,7 +650,7 @@ section.login{z-index:1; animation:none}
   color: #737;
 }
 
-.logobuild path:nth-child(2),
+ 
 .logobuild path:nth-child(3),
 .logobuild path:nth-child(4) {
   display: none
@@ -655,8 +658,8 @@ section.login{z-index:1; animation:none}
 
 #d-script-2:checked~.logobuild path:nth-child(3),
 #d-drone:checked~.logobuild path:nth-child(4),
-#d-login:checked~.logobuild path:nth-child(2),
-#d-script-1:checked~.logobuild path:nth-child(2) {
+#d-login:checked~.logobuild path:nth-child(3),
+#d-script-1:checked~.logobuild path:nth-child(3) {
   display: block
 }
  
@@ -719,7 +722,7 @@ section.login{z-index:1; animation:none}
 }
 
 .signatory:hover {
-  background-color: #818 !important
+  background-color: #ff2273 !important
 }
 
 label.pharma-login {
@@ -774,7 +777,7 @@ h3 {
 #v-script:checked~.logobuild svg,
 #v-sign:checked~.logobuild svg {
   height: 6rem;
-  top: -1rem;
+  top: -.4rem;
   color: #eee;
 }
 
@@ -787,3 +790,6 @@ section>p {
 }
 
 .primary{background-color:#d25 !important; color:white; box-shadow: 0 0 0 .1em currentcolor }
+
+
+.logobuild svg path:nth-child(2){color: #ff2273 !important }
