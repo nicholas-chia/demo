@@ -4,12 +4,28 @@
   svg path{fill:currentcolor}
   
   @import url(https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700|Overpass:100,100i,200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);
-  body{background-color:#000; color:#555;  text-align:center; font-size: 4vw; font-family:overpass, sans-serif; user-select:none; padding-top: 10vh}
+  body{background-color:#000; color:#777;  text-align:center; font-size: 4vw; font-family:overpass, sans-serif; user-select:none; padding-top: 6vh ; overflow:hidden}
+ 
+  body:after{content:""; display:block; z-index:-1;position:absolute; top:0; left:25%;   width: 75vw; height: 100vh;background-color:#333;  transform: skew(-45deg) translate(-400%,0);
+ 
+
+  background: linear-gradient(90deg, rgba(10,10,10,1) 20%, rgba(20,20,20,1) 20%, rgba(20,20,20,1) 83%, rgba(10,10,10,1) 83%);
+
+  animation: force 45s linear infinite;
   
+  animation-delay: -15s}
+
+  @keyframes force {
+
+    0%{ transform: skew(-45deg) translate(-400%,0)}
+    100%{ transform: skew(-45deg) translate(400%,0)}
+  }
+
   h1{font-size: 12vw;  }
 
- h2{font-size: 6vw;  font-weight: 900;text-transform: uppercase}
+ h2{font-size: 8vw;   letter-spacing: .025em; font-weight: 900;text-transform: uppercase; -webkit-text-stroke: .03em currentcolor; -webkit-text-fill-color: transparent;}
   a{color: white; font-weight: bold;  text-decoration:none; box-shadow: 0 .12em  }
+p{font-weight: 300;}
 
   @media (aspect-radio: landscape){
 
@@ -29,5 +45,5 @@
  />
 </svg>
 
-<p>but this is not the <a href="jump-page/index.html">index.html</a> you are looking for</p>
+<p>but this is not the <a href="jump-page/index.html">jump-page</a> you are looking for</p>
 </body></html>
