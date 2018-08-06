@@ -6,12 +6,14 @@
 <a target="_blank"  href="https://docs.google.com/presentation/d/1FmAv1WXAAZbGhVshAn_vG9ME4AeA7Gj21SngoOCO-f0/edit#slide=id.g3e61b508c8_0_20" class="slides nocp unique">Deck</a>
 <a target="_blank"  href="https://secure-sso-sso-app-demo.cloudapps.rhdemo.io/auth/admin" class="sso">SSO</a>
 <a target="_blank"  href="https://nuc1.rhdemo.io:8443/console/project/fuse/overview" class="fuse">Fuse</a>
-<a target="_blank"  href="https://fuse-online.cloudapps.rhdemo.io" class="fuse-online">Fuse Online</a>
+<a target="_blank"  href="https://fuse-online.cloudapps.rhdemo.io" class="fuse-online">Fuse</a>
 <a target="_blank"  href="https://3scale-admin.cloudapps.rhdemo.io" class="scale admin">Admin</a>
 <a target="_blank"  href="https://3scale.cloudapps.rhdemo.io" class="scale2 developer">Dev</a>
 <a target="_blank"  href="http://rhpam-rhpamcentr-rhpam-admin.cloudapps.rhdemo.io/" class="pam">PAM</a>  
 <a target="_blank"  href="https://tower.bionode.io" class="tower nocp"> Tower</a>
 <a target="_blank"  href="https://access.redhat.com/insights/overview" class="insights nocp">Insights</a>
+<a target="_blank"  href="https://www.redhat.com" class="redhat nocp">credit</a>
+
 </div>
 
 <style>.grid {
@@ -69,16 +71,17 @@ a.insights{background-image:url(img/insights.svg);background-size: 45%;}
 a.sso{background-image:url(img/sso.svg);background-size: 70%;}
 a.demo{background-image:url(img/bionode.svg);background-size: 60%;}
 a.slides{background-image:url(img/slides.svg);background-size: 60%;}
+a.redhat{background-image:url(img/redhat.svg);background-size: 60%;}
 
 
 .grid > a:hover, .grid > a:focus {
   opacity:1;
   background-color: #222;
-  transition: transform 0.24s cubic-bezier(0.2, 0.1, 0.1, 1.5);
+  transition: transform 0.4s cubic-bezier(0.2, 0.1, 0.1, 1.5);
   color: #c00;
   position: relative;
   z-index: 9;
-  transform: scale(1.025);
+  transform: scale(1.1);
   box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.9);
 }
 .grid > a:focus {
@@ -89,7 +92,7 @@ a.slides{background-image:url(img/slides.svg);background-size: 60%;}
 
 @media (orientation:portrait){
   .grid{ grid-template-columns: auto auto ; ;
-  grid-template-rows: auto auto auto auto auto;}
+  grid-template-rows: auto auto auto auto ;}
 
   .grid a{font-size:2.5vw; padding-top: 3vh;}
 }
@@ -97,9 +100,6 @@ a.slides{background-image:url(img/slides.svg);background-size: 60%;}
 
 .grid > a{overflow:hidden;}
 .grid > a:before{content:""; transition: all .25s ease;  display:block; background-color: #900;  position:absolute;  top:0; left:0; width: 100%; height: 100%; transform: translate(-150%,0) skew(-45deg)}
-
-
-
 .grid > a:after{content:"";   display:block;  transform:translate(0% ,-100%) scale(9)  ;position:absolute; bottom:0em; left:0;  width: 100%; height: 3em;   opacity:0;background-image: url(img/platform-thin.svg); background-repeat:no-repeat; background-size: contain; background-position: 50% 80%;}
 
 .grid > a:focus:after,
@@ -110,8 +110,14 @@ a.slides{background-image:url(img/slides.svg);background-size: 60%;}
 .unique:before{background-color:#555 !important;   }
 
 
+
+
 .demo:before{background-color:#ff2273 !important;   }
 .demo:hover{background-color:#df0253 !important; color:#000 !important  }
+
+.redhat:before{background-color:#c00 !important;   }
+
+.redhat:hover{background-color:#800 !important;    color:#aaa !important}
 
 .nocp:after, .unique:after{display:none !important}
 </style>
