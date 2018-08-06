@@ -802,9 +802,9 @@ section>p {
 
 
 
-#d-script-2:not(:checked)~section .briefing-block g circle{opacity:0;  transition: all .5s ease !important;}
+#d-script-1:not(:checked)~section .briefing-block g circle{opacity:0;  transition: all .5s ease !important;}
 
-#d-script-2:checked~section .briefing-block g circle{ opacity:1; transition: all .5s ease !important
+#d-script-1:checked~section .briefing-block g circle{ opacity:1; transition: all .5s ease !important
   
 }
 
