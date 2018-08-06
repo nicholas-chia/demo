@@ -1,3 +1,5 @@
+/*# sourceURL=css/main.css */
+/*@ sourceURL=css/main.css */
 * {
   box-sizing: border-box;
   user-select: none;
@@ -19,7 +21,7 @@ body {
   transition: all.2s ease;
   position: absolute;
   z-index: 9;
-  appearance: none;
+  -webkit-appearance: none;
   border: 0;
   background-color: transparent;
   width: 8rem;
@@ -40,7 +42,7 @@ button {
   border: 0;
   font-size: inherit;
   font-family: inherit;
-  appearance: none;
+  -webkit-appearance: none;
   display: inline-block;
   padding: 1rem 2rem;
   background-color: transparent;
@@ -295,14 +297,14 @@ section.login{z-index:1; animation:none}
   left: 0;
   opacity: 0;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
 }
 
 .script-block input:not(:checked)~div {
   max-height: 0;
   overflow: hidden;
-  color: #444;
-  background-color: #c3c6c9
+  color: #fff;
+  background-color: #d25
 }
 
 .script-block input:checked~div {
@@ -488,10 +490,10 @@ section.login{z-index:1; animation:none}
   cursor: pointer;
   font-size: .8em;
   transition: all .5s ease;
-  padding: 1rem 2rem;
+  padding: 3rem 2rem; padding-left: 4em; 
   background-color: rgba(230, 230, 230, 0.5);
-  border-radius: 2rem;
-  text-transform: lowercase;
+  border-radius: 1.5rem;
+  text-transform: uppercase;;
 }
 
 .options input:checked+label {
@@ -504,17 +506,17 @@ section.login{z-index:1; animation:none}
   content: "✓";
   display: block;
   position: absolute;
-  color: #616;
-  left: 1.8em;
-  top: .7em;
+  color: #d16;
+  left: .4em;
+  top: .6em; font-size: 2.5em;
 }
 
 .options input+label input {
   user-select: all;
   display: inline-block;
-  width: 2rem;
+  width: 4rem;
   font-size: 1em;
-  appearance: none;
+  -webkit-appearance: none;
   background-color: white;
   text-align: center;
   border-radius: .4em;
@@ -534,9 +536,9 @@ section.login{z-index:1; animation:none}
 
 .options input+label:before {
   content: "";
-  box-shadow: inset 0 0 0 .1em;
-  width: 1em;
-  height: 1em;
+  box-shadow: inset 0 0 0 .1em; opacity:.5;
+  width: 2em;
+  height: 2em; position:absolute; top:2em; left: 1em;
   border-radius: .15em;
   margin-bottom: -.1em;
   display: inline-block;
@@ -544,7 +546,7 @@ section.login{z-index:1; animation:none}
 }
 
 .options input:checked+label:before {
-  background-color: currentcolor;
+  background-color: currentcolor;opacity:1;
 }
 
 
@@ -559,7 +561,7 @@ section.login{z-index:1; animation:none}
 .sold {
   background-color: #013;
   color: white;
-  background-image: url(../img/rain.jpg);
+  background-image: url("http://127.0.0.1:8081/css/../img/rain.jpg");
   background-position: 50% 50%;
   background-size: cover;
   )
@@ -696,7 +698,7 @@ section.login{z-index:1; animation:none}
 }
 
 .bigpharm-block input:not(:checked)~div {
-  background-color: #789;
+  background-color: #00B9E4;
   color: #000;
 }
 
@@ -795,14 +797,20 @@ section>p {
 .logobuild svg path:nth-child(2){color: #ff2273 !important }
 
 
+[name="script"]:not(:checked) ~ div svg{opacity:0;   transform: scale(2); transition:none}
+ 
+.briefing-block svg{position:absolute; top: 0 ; max-height: 100%;  right:0; width: 16em;  transition: all 3s ease;}
+
+.script h4{margin:0; font-size: 2em;}
 
 
+.fact{display:inline-block;  width: 27%;  vertical-align:top; margin-bottom:2em; color:#d25}
+.fact{font-weight: 600; text-transform:uppercase} 
+.fact h4{ font-size: 3em; font-weight: 300;}
 
-.briefing-block svg{position:absolute; top: 0 ; max-height: 100%;  right:0; width: 10em;}
+.briefing-block g circle{stroke-width: .5px}
 
-
-
-#d-script-1:not(:checked)~section .briefing-block g circle{opacity:0;  transition: all .5s ease !important;}
+#d-script-1:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all .5s ease !important;}
 
 #d-script-1:checked~section .briefing-block g circle{ opacity:1; transition: all .5s ease !important
   
@@ -813,3 +821,21 @@ section>p {
   100%{opacity:1l;}
 }
 
+
+
+.script-block.bionode-block input:checked ~  div h3{color:#d24 }
+.script-block.bionode-block input:not(:checked) ~  div h3{color:#fff }
+
+
+
+.script-block.bigpharm-block input:checked ~  div{background-color:#eee}
+.script-block.bigpharm-block input:checked ~  div h3{color:#0079c4 }
+.script-block.bigpharm-block input:not(:checked) ~  div h3{color:#000 }
+
+
+
+
+.options label{position:relative;}
+.discount{position:absolute; left:1.5em; top: -2.6em; background-color:#d25; color: white; padding: .75em 1em; border-radius: 1em 1em 0 0}
+
+input:not(:checked) ~ label .discount{display:none}
