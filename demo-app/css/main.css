@@ -201,7 +201,7 @@ section.login{z-index:1; animation:none}
   height: 1rem;
   display: inline-block;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 .1em rgba(90, 90, 90, 0.35;)
+  box-shadow: inset 0 0 0 .1em rgba(190, 190, 190, 0.5;)
 }
 
 .indicators>div:nth-child(4) {
@@ -237,8 +237,8 @@ section.login{z-index:1; animation:none}
 #d-script-1:checked~.indicators div:nth-child(2),
 #d-script-2:checked~.indicators div:nth-child(3),
 #d-drone:checked~.indicators div:nth-child(4) {
-  background-color: rgba(100, 100, 100, 0.5) !important;
-  box-shadow: inset 0 0 0 .1em rgba(100, 100, 100, 0.25)
+  background-color: rgba(200, 200, 200, 0.5) !important;
+  box-shadow: inset 0 0 0 .1em rgba(200, 200, 200, 0.25)
 }
 
 #d-login {
@@ -802,7 +802,14 @@ section>p {
 
 
 
-#d-script-2:not(:checked)~section .briefing-block g circle{display:none}
+#d-script-2:not(:checked)~section .briefing-block g circle{opacity:0;  transition: all .5s ease !important;}
 
-#d-script-2:checked~section .briefing-block g circle{display:block}
+#d-script-2:checked~section .briefing-block g circle{ opacity:1; transition: all .5s ease !important
+  
+}
+
+@keygrames visit{
+  0%{opacity:0;}
+  100%{opacity:1l;}
+}
 
