@@ -22,6 +22,8 @@ body {
   position: absolute;
   z-index: 9;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 0;
   background-color: transparent;
   width: 8rem;
@@ -289,6 +291,9 @@ section.login{z-index:1; animation:none}
 .script-block input {
   position: absolute;
   z-index: 999;
+
+
+  height: 100%;
   display: block;
   width: 100%;
   top: 0;
@@ -810,13 +815,13 @@ section>p {
 
 .briefing-block g circle{stroke-width: .5px}
 
-#d-script-1:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all 1s ease !important;}
+#d-script-2:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all 1s ease !important;}
 
-#d-script-1:checked~section .briefing-block g circle{ opacity:1; transition: all 2s ease .35s !important}
+#d-script-2:checked~section .briefing-block g circle{ opacity:1; transition: all 2s ease .35s !important}
 
-#d-script-1:checked~section .briefing-block g circle:nth-child(2n){ transition-delay: .5s !important} 
-#d-script-1:checked~section .briefing-block g circle:nth-child(3n){ transition-delay: .6s !important} 
-#d-script-1:checked~section .briefing-block g circle:nth-child(4n){ transition-delay: .7s !important} 
+#d-script-2:checked~section .briefing-block g circle:nth-child(2n){ transition-delay: .5s !important} 
+#d-script-2:checked~section .briefing-block g circle:nth-child(3n){ transition-delay: .6s !important} 
+#d-script-2:checked~section .briefing-block g circle:nth-child(4n){ transition-delay: .7s !important} 
 
 
 @keygrames visit{
