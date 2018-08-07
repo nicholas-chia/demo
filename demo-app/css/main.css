@@ -810,9 +810,9 @@ section>p {
 
 .briefing-block g circle{stroke-width: .5px}
 
-#d-script-1:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all .5s ease !important;}
+#d-script-1:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all 1s ease !important;}
 
-#d-script-1:checked~section .briefing-block g circle{ opacity:1; transition: all .5s ease !important
+#d-script-1:checked~section .briefing-block g circle{ opacity:1; transition: all 2s ease .5s !important
   
 }
 
@@ -839,3 +839,25 @@ section>p {
 .discount{position:absolute; left:1.5em; top: -2.6em; background-color:#d25; color: white; padding: .75em 1em; border-radius: 1em 1em 0 0}
 
 input:not(:checked) ~ label .discount{display:none}
+
+
+
+
+
+
+[name="script"] ~ div .fact{transition: all 1s ease .5s}
+
+
+[name="script"] ~ div .fact:nth-child(3){transition-delay: .2s}
+[name="script"] ~ div .fact:nth-child(4){transition-delay: .6s}
+[name="script"] ~ div .fact:nth-child(5){transition-delay: .8s}
+[name="script"] ~ div .fact:nth-child(6){transition-delay: 1s}
+
+[name="script"]:not(:checked) ~ div .fact{opacity:0; transform: translate(0em,-2em); transition:none;}
+
+
+
+
+[name="script"]:not(:checked) ~ div .cta-b{opacity:0;}
+
+.cta-b{text-align:center; box-shadow: inset 0 0 0 .06em #d25;  padding: 1em; margin:0; font-size: 1.25em; transition: all 1s ease 1s;}
