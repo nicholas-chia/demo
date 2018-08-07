@@ -812,9 +812,12 @@ section>p {
 
 #d-script-1:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all 1s ease !important;}
 
-#d-script-1:checked~section .briefing-block g circle{ opacity:1; transition: all 2s ease .5s !important
-  
-}
+#d-script-1:checked~section .briefing-block g circle{ opacity:1; transition: all 2s ease .35s !important}
+
+#d-script-1:checked~section .briefing-block g circle:nth-child(2n){ transition-delay: .5s !important} 
+#d-script-1:checked~section .briefing-block g circle:nth-child(3n){ transition-delay: .6s !important} 
+#d-script-1:checked~section .briefing-block g circle:nth-child(4n){ transition-delay: .7s !important} 
+
 
 @keygrames visit{
   0%{opacity:0;}
@@ -838,7 +841,7 @@ section>p {
 .options label{position:relative;}
 .discount{position:absolute; left:1.5em; top: -2.6em; background-color:#d25; color: white; padding: .75em 1em; border-radius: 1em 1em 0 0}
 
-input:not(:checked) ~ label .discount{display:none}
+input:not(:checked) + label .discount{display:none}
 
 
 
