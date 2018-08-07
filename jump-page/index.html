@@ -56,6 +56,7 @@ body {
   padding-top: 7vh;
   text-decoration: none;
   align-self: stretch;
+  transition: all .5s ease;
   align-content: center;
   transform: scale(.9) translate(0);
   background-position:50% 55%; background-size: 65%;
@@ -91,18 +92,21 @@ a.redhat{background-image:url(img/redhat.svg);background-size: 60%; }
   z-index: 8;
 }
 
+
+..grid{user-select:none}
+
 @media (orientation:portrait){
   .grid{ grid-template-columns: auto auto ;   grid-template-rows: auto auto auto auto ;}
   .grid a{font-size:2.5vw; padding-top: 3vh;}}
 
 
 .grid > a{overflow:hidden;}
-.grid > a:before{content:""; transition: all .25s ease;  display:block; background-color: #900; ;
+.grid > a:before{content:""; display:block; background-color: #900; ;
 position:absolute;  top:0; left:0; width: 100%; height: 100%; transform: translate(-175%,0) skew(-45deg);  }
 .grid > a:after{content:"";   display:block;  transform:translate(0% ,-100%) scale(9)  ;position:absolute; bottom:1em; left:0;  width: 100%; height: 3em;   opacity:0;background-image: url(img/platform-thin.svg); background-repeat:no-repeat; background-size: contain; background-position: 50% 80%;}
 
 .grid > a:focus:after, .grid > a:hover:after{opacity:1;   transform:translate(0%, 0%) ; transition: all .5s ease; }
-.grid > a:focus:before, .grid > a:hover:before{transform: translate(150%,0) skew(-45deg); transition-duration: .6s }
+.grid > a:focus:before, .grid > a:hover:before{transform: translate(150%,0) skew(-45deg); transition: all .25s ease;  transition-duration: .6s }
 .unique:before{background-color:#555 !important;   }
 
 
@@ -116,7 +120,7 @@ position:absolute;  top:0; left:0; width: 100%; height: 100%; transform: transla
 
 
 a.slides:hover{ background-color:#135}
-a.slides:before{ background-color:#246 !important}
+a.slides:before{ background-color:#257 !important}
 
 
 
