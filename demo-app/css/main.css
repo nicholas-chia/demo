@@ -821,6 +821,12 @@ section>p {
 
 #d-script-2:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all 1s ease !important;}
 
+
+.fact em{display:none}
+
+#d-script-2:checked~section .briefing-block .fact em{display:inline; color: #0079c4; font-style:normal;}
+#d-script-2:checked~section .briefing-block .fact span{display:none}
+
 #d-script-2:checked~section .briefing-block g circle{ opacity:1; transition: all 2s ease .35s !important}
 
 #d-script-2:checked~section .briefing-block g circle:nth-child(2n){ transition-delay: .5s !important} 
