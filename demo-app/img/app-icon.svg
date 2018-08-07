@@ -44,7 +44,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="37.9"
+     inkscape:cx="-226"
      inkscape:cy="80"
      inkscape:document-units="px"
      inkscape:current-layer="svg2"
@@ -54,7 +54,7 @@
      inkscape:window-width="1283"
      inkscape:window-height="559"
      inkscape:window-x="443"
-     inkscape:window-y="419"
+     inkscape:window-y="397"
      inkscape:window-maximized="0"
      inkscape:snap-global="false"
      fit-margin-top="0"
@@ -80,20 +80,11 @@
      d="m 0,0 116,0 0,116 -116,0 z"
      id="rect8346"
      inkscape:connector-curvature="0" />
-  <text
-     sodipodi:linespacing="80%"
-     id="text8288"
-     y="83.245499"
-     x="40.775154"
-     style="font-style:normal;font-weight:normal;font-size:68.611px;line-height:80%;font-family:sans-serif;letter-spacing:-1.415px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'System Font';-inkscape-font-specification:'System Font Bold';fill:#ffffff;stroke-width:1px"
-       y="83.245499"
-       x="40.775154"
-       id="tspan8290"
-       sodipodi:role="line"><tspan
-         id="tspan8292"
-         style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'System Font';-inkscape-font-specification:'System Font Ultra-Bold Italic';fill:#ffffff">N</tspan></tspan></text>
+  <path
+     inkscape:connector-curvature="0"
+     id="path9833"
+     style="font-style:italic;font-variant:normal;font-weight:800;font-stretch:normal;font-family:'System Font';-inkscape-font-specification:'System Font Ultra-Bold Italic';fill:#ffffff"
+     d="m 52.6,83.2 6.2,-29.5 0.3,0 14.2,29.5 9.7,0 10.3,-48.3 -11.9,0 -6.2,29.6 -0.2,0 -14.3,-29.6 -9.6,0 -10.3,48.3 11.8,0 z" />
   <path
      id="path8365"
      d="M 0,0 29,0 0,112 Z"
