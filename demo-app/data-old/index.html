@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Andy Fitzsimon</title>
+  
+  
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700|Overpass:100,100i,200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext);
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Overpass, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #555;
+}
+
+section {
+  margin-top: 4em;
+}
+
+section > label {
+  color: white;
+  text-transform: uppercase;
+  transition: all .24s ease;
+  font-size: 1.5rem;
+  padding: 1em 0;
+  text-align: center;
+  width: 20%;
+  display: block;
+  position: fixed;
+  cursor: pointer;
+  z-index: 4;
+  user-select: none;
+  top: 0;
+  transform: translate(0, -0.5em);
+}
+
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.indicator:after,
+.indicator:before {
+  content: "";
+  transition: all .15s ease;
+  background-color: #c00;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 4rem;
+  transform: skew(-45deg);
+  z-index: 3;
+  width: 20%;
+  margin-left: 2.5%;
+}
+
+.indicator:after {
+  height: 4em;
+  z-index: 2;
+  background-color: #900;
+  width: 25%;
+  margin-left: 0;
+  transition: all .3s ease;
+}
+
+label[for="a2"],
+#a2:checked ~ .indicator:after,
+#a2:checked ~ .indicator:before {
+  left: 20%;
+}
+
+label[for="a3"],
+#a3:checked ~ .indicator:after,
+#a3:checked ~ .indicator:before {
+  left: 40%;
+}
+
+label[for="a4"],
+#a4:checked ~ .indicator:after,
+#a4:checked ~ .indicator:before {
+  left: 60%;
+}
+
+label[for="a5"],
+#a5:checked ~ .indicator:after,
+#a5:checked ~ .indicator:before {
+  left: 80%;
+}
+
+table, tr, tr, tbody {
+  border-collapse: collapse;
+  border: 0;
+  vertical-align: top;
+}
+
+tr:first-child th {
+  background-color: #444;
+  color: white;
+  text-transform: uppercase;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.table table,
+.table {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+tr:after,
+tr,
+td,
+td:before,
+td:after {
+  transition: none, box-shadow 0s linear;
+}
+
+table tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+table tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+td:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #c00, 0 0.3em 0.5em rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  z-index: 9;
+  position: relative;
+}
+
+#a1:checked ~ .table td {
+  padding: 1em;
+}
+
+#a1:checked ~ .table td {
+  border-left: 1px solid #ccc;
+  padding-left: .5em;
+}
+
+#a2:checked ~ .table tr {
+  display: inline-block;
+  margin: 1em;
+  padding: 1em;
+  max-width: 20em;
+  vertical-align: top;
+  min-height: 25em;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+#a4:checked ~ .table tr:first-child,
+#a3:checked ~ .table tr:first-child,
+#a2:checked ~ .table tr:first-child {
+  display: none;
+}
+
+#a2:checked ~ .table td {
+  display: inline-block;
+}
+
+#a3:checked ~ .table td:first-child,
+#a2:checked ~ .table td:first-child {
+  display: block;
+  float: right;
+  color: #ccc;
+}
+
+#a2:checked ~ .table td:nth-child(3) {
+  display: block;
+  font-size: 2em;
+}
+
+#a2:checked ~ .table td:last-child:before {
+  content: "Avoid when pregnant? ";
+  color: #c00;
+}
+
+#a2:checked ~ .table td:nth-child(7) {
+  display: block;
+  background-color: #fff;
+  font-size: 1.5em;
+  padding: .5em;
+  text-align: center;
+}
+
+#a2:checked ~ .table td:nth-child(8) {
+  display: none;
+}
+
+#a2:checked ~ .table td:last-child {
+  display: block;
+}
+
+#a3:checked ~ .table tr {
+  display: block;
+  width: 100%;
+  padding: 2em;
+  min-height: 15em;
+}
+
+#a3:checked ~ .table tr:after {
+  content: "add to cart";
+  cursor: pointer;
+  background-color: #a00;
+  color: white;
+  display: inline-block;
+  margin: 1em 0;
+  padding: 1em;
+  margin-bottom: 3em;
+  text-transform: uppercase;
+}
+
+#a3:checked ~ .table tr {
+  position: relative;
+}
+
+#a3:checked ~ .table tr:before {
+  content: "more info";
+  cursor: pointer;
+  background-color: #36c;
+  color: white;
+  display: inline-block;
+  margin: 1em 0;
+  padding: 1em;
+  margin-bottom: 3em;
+  text-transform: uppercase;
+  position: absolute;
+  right: 2em;
+  bottom: 0;
+}
+
+#a3:checked ~ .table tr:hover:after {
+  background-color: #c00;
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.5);
+}
+
+#a3:checked ~ .table td:nth-child(3) {
+  display: block;
+  font-size: 2.5em;
+}
+
+#a3:checked ~ .table td:nth-child(4) {
+  font-weight: 300;
+  font-size: 2em;
+  font-style: italic;
+  color: #aaa;
+  float: right;
+}
+
+#a3:checked ~ .table td:nth-child(1):before {
+  content: "SKU# ";
+}
+
+#a3:checked ~ .table td:nth-child(6),
+#a3:checked ~ .table td:nth-child(5),
+#a3:checked ~ .table td:nth-child(9),
+#a3:checked ~ .table td:nth-child(8),
+#a3:checked ~ .table td:nth-child(16),
+#a3:checked ~ .table td:nth-child(17),
+#a3:checked ~ .table td:nth-child(2) {
+  display: none;
+}
+
+#a3:checked ~ .table td:nth-child(7) {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: .5em;
+  box-shadow: 0 0 0 1px #ccc;
+}
+
+#a3:checked ~ .table {
+  max-width: 70em;
+  margin: 4em auto;
+}
+
+#a4:checked ~ .table tr {
+  background-color: transparent;
+}
+
+#a4:checked ~ .table {
+  max-width: 30em;
+  margin: 4em auto;
+}
+
+#a4:checked ~ .table td {
+  display: block;
+  font-family: monospace;
+  padding-left: 4em;
+}
+
+#a4:checked ~ .table td:first-child:after {
+  content: "\A { \A";
+  display: inline;
+  padding: 0;
+}
+
+#a4:checked ~ .table td:after {
+  padding-left: 0em;
+  content: " \", \A";
+  display: inline-block;
+}
+
+#a4:checked ~ .table td:before {
+  content: " \" ";
+  display: inline-block;
+  padding-right: 1em;
+  padding-left: 3em;
+}
+
+#a4:checked ~ .table td:nth-child(1) {
+  padding-left: 1em;
+}
+
+#a2:checked ~ .table {
+  background-color: #678;
+}
+
+#a2:checked ~ .table tr {
+  background-color: #eee;
+}
+
+#a4:checked ~ .table {
+  background-color: #aaa;
+  margin: 5em auto;
+  padding: 4em;
+}
+
+#a4:checked ~ .table tr:after,
+#a4:checked ~ .table td:after,
+#a4:checked ~ .table td:before,
+#a4:checked ~ .table td,
+#a4:checked ~ .table tr {
+  transition: none;
+}
+
+#a2:checked ~ .table tr {
+  position: relative;
+}
+
+#a2:checked ~ .table td:nth-child(14) {
+  background-color: #d25;
+  color: white;
+  padding: 1em;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#a2:checked ~ .table table .bp {
+  background-color: #36c !important;
+}
+
+#a5:checked ~ .table {
+  background-color: #333;
+}
+
+#a5:checked ~ .table tr:first-child {
+  display: none;
+}
+
+#a5:checked ~ .table tr {
+  display: block;
+  margin: 3em;
+  padding: 2em;
+  box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.25);
+}
+
+#a5:checked ~ .table td {
+  display: inline-block;
+  padding: 1em;
+}
+
+#a5:checked ~ .table tr:before {
+  content: "FCC REPORT ITEM";
+  font-size: 1.5em;
+  display: block;
+  padding: 1rem;
+}
+
+#a5:checked ~ .table td:before {
+  color: #aaa;
+}
+
+#a5:checked ~ .table td:nth-child(1):before {
+  content: "SKU: ";
+}
+
+#a5:checked ~ .table td:nth-child(2):before {
+  content: "Drug Class: ";
+}
+
+#a5:checked ~ .table td:nth-child(3):before {
+  content: "Drug Name: ";
+}
+
+#a5:checked ~ .table td:nth-child(4):before {
+  content: "Active Ingredient Name: ";
+}
+
+#a5:checked ~ .table td:nth-child(5):before {
+  content: "Administer Route: ";
+}
+
+#a5:checked ~ .table td:nth-child(6):before {
+  content: "Contains Alcohol : ";
+}
+
+#a3:checked ~ .indicator,
+#a3:checked ~ label {
+  opacity: 0;
+  height: .5em;
+}
+
+#a3:checked ~ .panel {
+  height: 0.2em;
+  background-color: #c00;
+}
+
+.panel {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 4em;
+  background-color: #111;
+  transition: all .5s;
+  width: 100%;
+}
+
+.fake-branding:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ccc;
+  height: 5em;
+  width: 95vw;
+  left: 2.5vw;
+  top: 1em;
+  border-radius: 1em 1em 0 0;
+}
+
+.fake-branding:after {
+  content: "http://fauxlgreens.domain";
+  color: #555;
+  font-family: sans-serif;
+  padding-left: 1em;
+  line-height: 2em;
+  position: absolute;
+  top: 3.5em;
+  height: 2em;
+  background-color: white;
+  width: 80vw;
+  left: 5vw;
+  border-radius: .2em;
+}
+
+.fake-branding {
+  display: none;
+  background-image: url(http://1000logos.net/wp-content/uploads/2017/07/Walgreens-Logo.png);
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: contain;
+  height: 7em;
+  margin-bottom: 2em;
+}
+
+#a3:checked ~ .table .fake-branding {
+  display: block;
+}
+
+#a3:checked ~ .table {
+  font-family: 'Comic Sans MS', 'comic sans',comic-sans, verdana, sans-serif;
+}
+
+#a3:checked ~ .table {
+  background-color: #fff;
+  border: .1em solid #ccc;
+  box-shadow: 0 3em 2em rgba(0, 0, 0, 0.2);
+  padding: 4em 10vw;
+  margin-top: 0em;
+  max-width: 95vw;
+  width: 95vw;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <section>
+ 
+  
+<input type="radio" name="r" id="a1" tabindex="1" checked/>
+<input type="radio" name="r" id="a2" tabindex="2" />
+<input type="radio" name="r" id="a3" tabindex="3" />
+<input type="radio" name="r" id="a4" tabindex="4" />
+<input type="radio" name="r" id="a5" tabindex="5" />
+  
+  <label for="a1">Data</label>
+  <label for="a2">Stock</label>
+  <label for="a3">Store</label>
+  <label for="a4">JSON</label>
+  <label for="a5">FCC</label>
+  <div class="indicator"></div>
+<div class="panel"></div>
+
+
+
+  
+  
+  
+  
+<div class="table">
+  <div class="fake-branding"></div>
+<table>
+  <tbody>
+    <tr>
+       <th>SKUNo</th>
+      <th>drugClass</th>
+      <th>drugName</th>
+      <th>Ingredient</th>
+      <th>Route</th>
+      <th>alcohol</th>
+      <th>Strength</th>
+      <th>Warning</th>
+      <th>Form</th>
+      <th>Schedule</th>
+      <th>Unit</th>
+      <th>Warning</th>
+      <th>Interacting</th>
+      <th>manufacturer</th>
+      <th>Std Name</th>
+      <th>overdosage</th>
+      <th>nopreg</th>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1000</td>
+      <td contenteditable="true">Antibiotics</td>
+      <td contenteditable="true">Augmentin</td>
+      <td contenteditable="true">Amoxicillin</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">250mg,500mg,875mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet, Powder</td>
+      <td contenteditable="true">12hrs</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Allopurinol</td>
+      <td contenteditable="true"    class="bp">BioPharm</td>
+      <td contenteditable="true">Amoxicillin-clavulanate</td>
+      <td contenteditable="true">250mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr   class="na">
+      <td contenteditable="true">DR1001</td>
+      <td contenteditable="true">Antidepressants</td>
+      <td contenteditable="true">Stemetil</td>
+      <td contenteditable="true">prochlorperazine maleate</td>
+      <td contenteditable="true">Anal</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">2mg, 3mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">Lorazepam</td>
+      <td contenteditable="true">150mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr   class="na">
+      <td contenteditable="true">DR1002</td>
+      <td contenteditable="true">Statins</td>
+      <td contenteditable="true">Rozerem</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">50mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Powder</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">Prednisone USP</td>
+      <td contenteditable="true">150mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr >
+      <td contenteditable="true">DR1003</td>
+      <td contenteditable="true">Decongestant</td>
+      <td contenteditable="true">Telfast D</td>
+      <td contenteditable="true">Fexofenadine HCl, pseudoephedrine HCl.</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">60mg, 120mg, 180mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">12 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true"    class="bp">BigPharm</td>
+      <td contenteditable="true">Fexofenadine HCl, pseudoephedrine HCl.</td>
+      <td contenteditable="true">250mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr  >
+      <td contenteditable="true">DR1004</td>
+      <td contenteditable="true">Antihistamine</td>
+      <td contenteditable="true">Claritin</td>
+      <td contenteditable="true">loratadine</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">10mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">4 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">loratadine</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr >
+      <td contenteditable="true">DR1005</td>
+      <td contenteditable="true">Paracemol</td>
+      <td contenteditable="true">Panadol</td>
+      <td contenteditable="true">Phenylephrine Hydrochloride</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">50mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablets</td>
+      <td contenteditable="true">4 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td    class="bn" contenteditable="true">BioNode</td>
+      <td contenteditable="true">Phenylephrine Hydrochloride</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr >
+      <td contenteditable="true">DR1006</td>
+      <td contenteditable="true">Sleeping Aid</td>
+      <td contenteditable="true">Rozerem</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">15mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablets</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td     class="bp" contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Amoxicillin</td>
+      <td contenteditable="true">150mg/kg</td>
+      <td contenteditable="true">yes</td>
+    </tr>
+    <tr  class="na">
+      <td contenteditable="true">DR1007</td>
+      <td contenteditable="true">Dizziness</td>
+      <td contenteditable="true">Stemetil</td>
+      <td contenteditable="true">prochlorperazine maleate</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">5mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablets</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">250mg/kg</td>
+      <td contenteditable="true">&nbsp;</td>
+    </tr>
+    <tr  >
+      <td contenteditable="true">DR1008</td>
+      <td contenteditable="true">Hypertension</td>
+      <td contenteditable="true">Amlodipine</td>
+      <td contenteditable="true">amlodipine besylate</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">5mg, 10mg, 15mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">simvastatin</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Amlodipine besylate</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr  class="bn">
+      <td contenteditable="true">DR1009</td>
+      <td contenteditable="true">Anxiety disorders</td>
+      <td contenteditable="true">Lorazepam</td>
+      <td contenteditable="true">Lorazepam</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">2mg, 3mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">8 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">benzodiazepines</td>
+      <td contenteditable="true">BioNode</td>
+      <td contenteditable="true">AUROBINDO</td>
+      <td contenteditable="true">50mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr class="bn">
+      <td contenteditable="true">DR1010</td>
+      <td contenteditable="true">Allergic</td>
+      <td contenteditable="true">Prednisone</td>
+      <td contenteditable="true">Prednisone USP</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">20 mg; 10 mg; 2.5 mg; 5 mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">amphotericin B</td>
+      <td contenteditable="true">BioNode</td>
+      <td contenteditable="true">Prednisone</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1011</td>
+      <td contenteditable="true">Antibiotics</td>
+      <td contenteditable="true">Panadol</td>
+      <td contenteditable="true">Phenylephrine Hydrochloride</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">50mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">12 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Lorazepam</td>
+      <td contenteditable="true">250mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1012</td>
+      <td contenteditable="true">Antidepressants</td>
+      <td contenteditable="true">Adderall</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">15mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Powder</td>
+      <td contenteditable="true">4 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Prednisone USP</td>
+      <td contenteditable="true">250mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1013</td>
+      <td contenteditable="true">Statins</td>
+      <td contenteditable="true">Amoxicillin</td>
+      <td contenteditable="true">prochlorperazine maleate</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">5mg</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">4 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BioNode</td>
+      <td contenteditable="true">Fexofenadine HCl, pseudoephedrine HCl.</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1014</td>
+      <td contenteditable="true">Decongestant</td>
+      <td contenteditable="true">Amlodipine</td>
+      <td contenteditable="true">amlodipine besylate</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">5mg, 10mg, 15mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">loratadine</td>
+      <td contenteditable="true">250mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1015</td>
+      <td contenteditable="true">Antihistamine</td>
+      <td contenteditable="true">Ciprofloxacin</td>
+      <td contenteditable="true">Lorazepam</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">50mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">Phenylephrine Hydrochloride</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1016</td>
+      <td contenteditable="true">Paracemol</td>
+      <td contenteditable="true">Clindamycin</td>
+      <td contenteditable="true">Prednisone USP</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">15mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Liquid</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">ml</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Amoxicillin</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1017</td>
+      <td contenteditable="true">Sleeping Aid</td>
+      <td contenteditable="true">Cymbalta</td>
+      <td contenteditable="true">Fexofenadine HCl, pseudoephedrine HCl.</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">5mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">8 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BioPharm</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">150mg/kg</td>
+      <td contenteditable="true">yes</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1018</td>
+      <td contenteditable="true">Dizziness</td>
+      <td contenteditable="true">Doxycycline</td>
+      <td contenteditable="true">loratadine</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">5mg, 10mg, 15mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Powder</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BioPharm</td>
+      <td contenteditable="true">Lorazepam</td>
+      <td contenteditable="true">50mg/kg</td>
+      <td contenteditable="true">&nbsp;</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1019</td>
+      <td contenteditable="true">Hypertension</td>
+      <td contenteditable="true">Metformin</td>
+      <td contenteditable="true">Phenylephrine Hydrochloride</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">50mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Prednisone USP</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">No</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1020</td>
+      <td contenteditable="true">Anxiety disorders</td>
+      <td contenteditable="true">Naproxen</td>
+      <td contenteditable="true">Amoxicillin</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">50mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">8 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Fexofenadine HCl, pseudoephedrine HCl.</td>
+      <td contenteditable="true">50mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1021</td>
+      <td contenteditable="true">Allergic</td>
+      <td contenteditable="true">Omeprazole</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">15mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BioNode</td>
+      <td contenteditable="true">loratadine</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1022</td>
+      <td contenteditable="true">Antidepressants</td>
+      <td contenteditable="true">Tramadol</td>
+      <td contenteditable="true">prochlorperazine maleate</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">5mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Liquid</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">ml</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">Amoxicillin</td>
+      <td contenteditable="true">50mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1023</td>
+      <td contenteditable="true">Statins</td>
+      <td contenteditable="true">Zoloft</td>
+      <td contenteditable="true">Phenylephrine Hydrochloride</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">5mg, 10mg, 15mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+    <tr>
+      <td contenteditable="true">DR1024</td>
+      <td contenteditable="true">Statins</td>
+      <td contenteditable="true">Aoloft</td>
+      <td contenteditable="true">Phenylephrine Hydrochloride</td>
+      <td contenteditable="true">Oral</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">5mg, 10mg, 15mg</td>
+      <td contenteditable="true">Yes</td>
+      <td contenteditable="true">Tablet</td>
+      <td contenteditable="true">24 hours</td>
+      <td contenteditable="true">mg</td>
+      <td contenteditable="true">No</td>
+      <td contenteditable="true">&nbsp;</td>
+      <td contenteditable="true">BigPharm</td>
+      <td contenteditable="true">ramelteon</td>
+      <td contenteditable="true">100mg/kg</td>
+      <td contenteditable="true">Yes</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+  
+  
+
+</section>
+  
+  
+
+</body>
+
+</html>
