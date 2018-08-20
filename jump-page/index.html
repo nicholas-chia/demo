@@ -2,6 +2,8 @@
 <body>
 <div class="grid">
 <a target="_blank"  href="http://demo.rhdemo.io/demo/demo-app/index.html" class="demo nocp unique"> App</a>
+<a target="_blank"  href="https://www.redhat.com" class="bigpharm nocp">stock</a>
+
 <a target="_blank"  href="https://nuc1.rhdemo.io:8443/console"   class="openshift" >OCP</a>
 <a target="_blank"  href="https://docs.google.com/presentation/d/1FmAv1WXAAZbGhVshAn_vG9ME4AeA7Gj21SngoOCO-f0/edit#slide=id.g3e61b508c8_0_20" class="slides nocp unique">Deck</a>
 <a target="_blank"  href="https://secure-sso-sso-app-demo.cloudapps.rhdemo.io/auth/admin" class="sso">SSO</a>
@@ -12,7 +14,6 @@
 <a target="_blank"  href="http://rhpam-rhpamcentr-rhpam-admin.cloudapps.rhdemo.io/" class="pam">PAM</a>    
 <a target="_blank"  href="https://tower.bionode.io" class="tower nocp"> Tower</a>
 <a target="_blank"  href="https://access.redhat.com/insights/overview" class="insights nocp">Insights</a>
-<a target="_blank"  href="https://www.redhat.com" class="redhat nocp">credit</a>
 
 </div>
 
@@ -56,7 +57,7 @@ body {
   padding-top: 7vh;
   text-decoration: none;
   align-self: stretch;
-  transition: all .35s ease;
+  transition: all .15s ease-out;
   align-content: center;
   transform: scale(.9) translate(0);
   background-position:50% 55%; background-size: 75%;
@@ -73,7 +74,7 @@ a.insights{background-image:url(img/insights.svg);background-size: 45%;}
 a.sso{background-image:url(img/sso.svg);background-size: 70%;}
 a.demo{background-image:url(img/bionode.svg);background-size: 60%;}
 a.slides{background-image:url(img/slides.svg);background-size: 60%;}
-a.redhat{background-image:url(img/redhat.svg);background-size: 60%; }
+a.bigpharm{background-image:url(img/bigpharm.svg);background-size: 70%; }
 
 
 .grid > a:hover, .grid > a:focus {
@@ -104,8 +105,8 @@ position:absolute;  top:0; left:0; width: 100%; height: 100%; transform: transla
 .demo:before{background-color:#ff2273 !important;   }
 .demo:hover, .demo:focus{background-color:#df0253 !important; color:#000 !important  }
 
-.redhat:before{background-color:#c00 !important;   }
-.redhat:hover, .redhat:focus{background-color:#900 !important;     color:#aaa !important}
+.bigpharm:before{background-color:#58afbc !important;   }
+.bigpharm:hover, .redhat:focus{background-color:#007a87 !important;     color:#a3dbe8 !important}
 
 
 a.slides:hover,a.slides:focus{ background-color:#135}
