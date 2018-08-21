@@ -313,7 +313,55 @@ td {
 }
 
 
+#a2:checked ~ .table #results > table > tbody > tr {display:block;margin-top:4em;}
+#a2:checked ~ .table #results > table > tbody > tr > td{border:none}
 
+
+#a2:checked ~ .table #results > table > tbody > tr > td td,
+#a2:checked ~ .table #results > table > tbody > tr > td th{border:none}
+
+#a2:checked ~ .table #results > table > tbody > tr > td th{width: 12em; text-transform: uppercase; font-size:.7em; color:#999; text-align:right; padding-right:1em;}
+
+
+
+
+#a2:checked ~ .table #results > table > tbody > tr{width: 20em; display:inline-block; }
+
+#a2:checked ~ .table #results > table > tbody > tr > th{
+  line-height: 10em;
+  text-align:center;
+border:none;
+
+  background-position:50% 50%;
+   display:block; height:10em; background-size: contain ; background-repeat:no-repeat;
+   background-image:url(../img/pill1.jpg);
+}
+
+#a2:checked ~ .table #results > table > tbody > tr:nth-child(2n) > th{
+   background-image:url(../img/pill2.jpg); }
+
+#a2:checked ~ .table #results > table > tbody > tr:nth-child(3n) > th{
+   background-image:url(../img/pill3.jpg); }
+
+#a2:checked ~ .table #results > table > tbody > tr:nth-child(4n) > th{
+   background-image:url(../img/pill4.jpg); }
+
+#a2:checked ~ .table #results > table > tbody > tr:nth-child(5n) > th{
+   background-image:url(../img/pill5.jpg); }
+
+
+
+#a2:checked ~ .table #results > table > tbody > tr:nth-child(6n) > th{
+   background-image:url(../img/pill6.jpg); }
+
+#a2:checked ~ .table #results > table > tbody > tr:nth-child(7n) > th{
+   background-image:url(../img/pill7.jpg); }
+
+#a2:checked ~ .table #results > table > tbody > tr:nth-child(8n) > th{
+   background-image:url(../img/pill8.jpg); }
+
+
+/**/
 
 
 #a3:checked ~ .table #results > table > tbody > tr > td:nth-child(2){
