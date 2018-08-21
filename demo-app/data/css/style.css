@@ -365,7 +365,23 @@ border:none;
 
 /**/
 
+#a3:checked ~ .table #results > table > tbody > tr > td tr{transition: .75s ease !important; transform:0;}
 
+
+#a3:checked ~ .table #results > table > tbody > tr{position:relative;}
+#a3:checked ~ .table #results > table > tbody > tr > td:after{content:"more info"; box-shadow: 0 0 0 .1em; color:#39c;  cursor:pointer; padding:.5em 1em; background-color:#fff;  position:absolute; left:0; bottom:5rem;}
+
+#a3:checked ~ .table #results > table > tbody > tr > td tr{opacity:0; transform: translate(1em,0)}
+
+#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(3),
+#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(2),
+#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(1){opacity:1; transform:none;}
+
+
+
+#a3:checked ~ .table #results > table > tbody > tr > td:focus tr{opacity:1; transform: scale(1)}
+
+#a3:checked ~ .table #results > table > tbody > tr > td:focus:after{opacity:0;}
 #a3:checked ~ .table #results > table > tbody > tr > td:nth-child(2){
   background-position: top right;
    display:block; height:15em; background-size: 9em ; background-repeat:no-repeat;
@@ -446,6 +462,8 @@ border-collapse: collapse; padding:.75rem ; margin:0; border:0;}
 
 .crm{display:none; width: 90%; margin-left:5% ;  margin-top:6rem;}
 
+.crm td{padding: 1rem .75rem}
+
 .crm th:first-child{border-radius: 1rem 0 0 0}
 
 .crm th:last-child{border-radius: 0 1rem  0 0}
@@ -460,10 +478,10 @@ border-collapse: collapse; padding:.75rem ; margin:0; border:0;}
 
 .crm td:nth-child(4),
 .crm td:nth-child(5){color:#49c}
-.crm td{transition: all .2s ease}
+
  
-.crm tr td{box-shadow: 0 .5em transparent, -.5em transparent }
+.crm tr td{box-shadow: inset0 .5em transparent,inset -.5em transparent }
 
 
-.crm tr:hover td{opacity:1; box-shadow:  0 .12em #d24,  0 -.12em #d24}
+.crm tr:hover td{opacity:1; box-shadow: inset  0 .12em #d24,inset  0 -.12em #d24}
 
