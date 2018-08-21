@@ -271,9 +271,10 @@ td {
   display: none;
 }
 
+
 #a3:checked ~ .table #results > table > tbody > tr tr:nth-child(3) td {
-  font-size: 2em;
-  display: block; width: 100%;
+  font-size: 3em; 
+  display: block !important; clear:both; float:none;  width: 100% !important; min-width: 100%;
 }
 
 #a3:checked ~ .table #results > table > tbody > tr > th {
@@ -373,14 +374,18 @@ border:none;
 
 #a3:checked ~ .table #results > table > tbody > tr > td tr{opacity:0; transform: translate(1em,0)}
 
-#a3:checked ~ .table #results > table > tbody > tr > td tr{ margin: .2em .2em; font-family:serif; text-transform: uppercase;}
+#a3:checked ~ .table #results > table > tbody > tr > td tr{ margin: .2em .2em; text-transform: uppercase;}
 
 #a3:checked ~ .table #results > table > tbody > tr > td:focus tr{opacity:1; transform: scale(1); font-family:sans-serif; }
 
 
+#a3:checked ~ .table #results > table table{width: 70%;}
+
+#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(2){float:left; clear:both; width: 100%; }
+
 #a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(3),
 #a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(2),
-#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(1){opacity:1; text-transform:capitalize; margin: 0em;transform:none; box-shadow:none;}
+#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(1){opacity:1;font-family:serif;  text-transform:capitalize; margin: 0em;transform:none; box-shadow:none;}
 
 
 #a3:checked ~ .table #results > table > tbody > tr > td:focus:after{opacity:0;}
