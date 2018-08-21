@@ -287,8 +287,7 @@ td {
 #a2:checked ~ .table table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 40rem;
-}
+max-width: 95%; margin: 2em auto;}
 
 #a2:checked ~ .table > div > table {
   display: block;
@@ -318,14 +317,14 @@ td {
 
 
 #a2:checked ~ .table #results > table > tbody > tr > td td,
-#a2:checked ~ .table #results > table > tbody > tr > td th{border:none}
+#a2:checked ~ .table #results > table > tbody > tr > td th{border:none; border-bottom:1px solid #eee}
+
 
 #a2:checked ~ .table #results > table > tbody > tr > td th{width: 12em; text-transform: uppercase; font-size:.7em; color:#999; text-align:right; padding-right:1em;}
 
 
 
-
-#a2:checked ~ .table #results > table > tbody > tr{width: 20em; display:inline-block; }
+#a2:checked ~ .table #results > table > tbody > tr{width: 20em; display:inline-block; margin: 1em 2em}
 
 #a2:checked ~ .table #results > table > tbody > tr > th{
   line-height: 10em;
@@ -409,3 +408,19 @@ border:none;
      #a3:checked ~ .table #results > table > tbody > tr:nth-child(8n) > td:nth-child(2){
      background-image:url(../img/pill8.jpg)
    }
+
+ #a4:checked ~ .table{color:black; background-color:#fafafa;}
+   #a4:checked ~ .table{padding: 5em; max-width: 20em ; margin: 2em auto;}
+   #a4:checked ~ .table #results > table th,
+   #a4:checked ~ .table #results > table td,
+   #a4:checked ~ .table #results > table tr,
+   #a4:checked ~ .table #results > table{display:block; font-weight: 300; font-family:monospace;}
+
+
+      #a4:checked ~ .table #results > table th:after{content:" {"; color:#ccc;}
+            #a4:checked ~ .table #results > table td:after{content:" , ";color:#ccc;}
+            #a4:checked ~ .table #results > table th:before{content:"} "; display:block; color:#ccc;}
+
+                        #a4:checked ~ .table #results > table >tbody > tr > th:before{content:""}
+
+
