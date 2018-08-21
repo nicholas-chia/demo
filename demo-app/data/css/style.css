@@ -1,4 +1,6 @@
-*:before,
+
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      *:before,
 *:after,
 * {
   box-sizing: border-box;
@@ -269,7 +271,7 @@ td {
 
 #a3:checked ~ .table #results > table > tbody > tr tr:nth-child(3) td {
   font-size: 2em;
-  display: block;
+  display: block; width: 100%;
 }
 
 #a3:checked ~ .table #results > table > tbody > tr > th {
@@ -309,3 +311,53 @@ td {
   background-color: #d25;
   color: white;
 }
+
+
+
+
+
+#a3:checked ~ .table #results > table > tbody > tr > td:nth-child(2){
+  background-position: top right;
+   display:block; height:15em; background-size: 9em ; background-repeat:no-repeat;
+   background-image:url(../img/pill1.jpg)}
+ 
+ 
+   #a3:checked ~ .table #results > table > tbody > tr:nth-child(2n) > td:nth-child(2){
+     background-image:url(../img/pill2.jpg)
+   }
+ 
+ 
+   #a3:checked ~ .table #results > table > tbody > tr:nth-child(3n) > td:nth-child(2){
+     background-image:url(../img/pill3.jpg)
+   }
+ 
+ 
+ 
+   #a3:checked ~ .table #results > table > tbody > tr:nth-child(4n) > td:nth-child(2){
+     background-image:url(../img/pill4.jpg)
+   }
+ 
+ 
+     #a3:checked ~ .table #results > table > tbody > tr:nth-child(5n) > td:nth-child(2){
+     background-image:url(../img/pill5.jpg)
+   }
+ 
+ 
+ 
+ 
+     #a3:checked ~ .table #results > table > tbody > tr:nth-child(6n) > td:nth-child(2){
+     background-image:url(../img/pill6.jpg)
+   }
+ 
+ 
+ 
+ 
+     #a3:checked ~ .table #results > table > tbody > tr:nth-child(7n) > td:nth-child(2){
+     background-image:url(../img/pill7.jpg)
+   }
+ 
+ 
+   
+     #a3:checked ~ .table #results > table > tbody > tr:nth-child(8n) > td:nth-child(2){
+     background-image:url(../img/pill8.jpg)
+   }
