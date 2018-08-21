@@ -425,10 +425,21 @@ border:none;
 
 
 
-
 body{margin:0; padding:0;}
 #a5:checked ~ .table{background-color:#555; margin:0;  width: 100%;}
 
 #a5:checked ~ .table #results > table{width: 100%; margin: 2em auto;}
 #a5:checked ~ .table #results > table > tbody > tr{display:block; margin: 2em auto; padding: 2em; background-color:#eee;
 max-width: 60em ; box-shadow: 0 .6em .7em rgba(0,0,0,0.3)}
+
+
+
+.crm{display:none; width: 100%; margin-top:5rem}
+
+.crm table, .crm td, .crm th{
+
+border-collapse: collapse; padding:.5em 0; margin:0; border:0;}
+
+.crm th{text-transform: uppercase; color:white; padding:1rem 0; background-color:#d24}
+#a1:checked ~ .table{display:none}
+#a1:checked ~ .crm{display:table}
