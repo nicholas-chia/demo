@@ -206,7 +206,7 @@ label[for="a5"],
 }
 
 .fake-branding:after {
-  content: "http://fauxlgreens.domain";
+  content: "https://wallreds.store";
   color: #555;
   font-family: sans-serif;
   padding-left: 1em;
@@ -227,6 +227,7 @@ label[for="a5"],
   background-position: 0% 50%;
   background-size: contain;
   height: 7em;
+  max-width:18em;
   margin-bottom: 2em;
   margin-top: 5rem;
 }
@@ -241,10 +242,11 @@ label[for="a5"],
 
 #a3:checked ~ .table {
   background-color: #fff;
-  border: 0.1em solid #ccc;
-  box-shadow: 0 3em 2em rgba(0, 0, 0, 0.2);
+  border: 0.1em solid #ccc; border-top:none;
+  box-shadow: 0 1.5em 2em rgba(0, 0, 0, 0.2);
   padding: 4em 10vw;
-  margin-top: 0em;
+  margin-top: 3rem;
+  margin: 2rem auto;
   max-width: 95vw;
   width: 95vw;
 }
@@ -256,7 +258,7 @@ td {
 #a3:checked ~ .table #results > table > tbody > tr > th,
 #a3:checked ~ .table #results > table > tbody > tr {
   display: inline-block;
-  width: 50%;
+  width: 48%; margin-right:2%;
   vertical-align: top;
   height: auto;
 }
@@ -287,7 +289,9 @@ td {
 #a2:checked ~ .table table {
   border-collapse: collapse;
   width: 100%;
-max-width: 95%; margin: 2em auto;}
+  max-width: 95%;
+  margin: 2em auto;
+  }
 
 #a2:checked ~ .table > div > table {
   display: block;
@@ -311,16 +315,15 @@ max-width: 95%; margin: 2em auto;}
   color: white;
 }
 
-
 #a2:checked ~ .table #results > table > tbody > tr {display:block;margin-top:4em;}
-#a2:checked ~ .table #results > table > tbody > tr > td{border:none}
+#a2:checked ~ .table #results > table > tbody > tr > td{border:none;display: block;margin:  0 auto;}
 
 
 #a2:checked ~ .table #results > table > tbody > tr > td td,
 #a2:checked ~ .table #results > table > tbody > tr > td th{border:none; border-bottom:1px solid #eee}
 
 
-#a2:checked ~ .table #results > table > tbody > tr > td th{width: 12em; text-transform: uppercase; font-size:.7em; color:#999; text-align:right; padding-right:1em;}
+#a2:checked ~ .table #results > table > tbody > tr > td th{width: 12em; text-transform: uppercase; font-size:.55em; color:#999; text-align:right; padding-right:1em;}
 
 
 
@@ -434,12 +437,33 @@ max-width: 60em ; box-shadow: 0 .6em .7em rgba(0,0,0,0.3)}
 
 
 
-.crm{display:none; width: 100%; margin-top:5rem}
 
-.crm table, .crm td, .crm th{
+.crm , .crm td, .crm th{
 
-border-collapse: collapse; padding:.5em 0; margin:0; border:0;}
+border-collapse: collapse; padding:.75rem ; margin:0; border:0;}
 
-.crm th{text-transform: uppercase; color:white; padding:1rem 0; background-color:#d24}
+.crm th{text-transform: uppercase; color:white; font-size:.8em ; padding:1rem .75rem; background-color:#d24}
+
+.crm{display:none; width: 90%; margin-left:5% ;  margin-top:6rem;}
+
+.crm th:first-child{border-radius: 1rem 0 0 0}
+
+.crm th:last-child{border-radius: 0 1rem  0 0}
+
 #a1:checked ~ .table{display:none}
 #a1:checked ~ .crm{display:table}
+
+.crm td:nth-child(1){color:#777}
+
+.crm td:nth-child(2),
+.crm td:nth-child(3){font-weight: 600;}
+
+.crm td:nth-child(4),
+.crm td:nth-child(5){color:#49c}
+.crm td{transition: all .2s ease}
+ 
+.crm tr td{box-shadow: 0 .5em transparent, -.5em transparent }
+
+
+.crm tr:hover td{opacity:1; box-shadow:  0 .12em #d24,  0 -.12em #d24}
+

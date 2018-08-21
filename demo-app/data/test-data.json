@@ -454,24 +454,5 @@
     "nonProprietaryName": "ramelteon",
     "overdosage": "150mg/kg",
     "pregnancyWarning": "yes"
-  },
-  "DrugSKUNo": {
-    "drugSKUNo": "DrugSKUNo",
-    "drugClass": "drugClass",
-    "drugName": "drugName",
-    "activeIngredient": "activeIngredient",
-    "administrationRoute": "administrationRoute",
-    "alcoholWarning": "alcoholWarning",
-    "availableStrength": "availableStrength",
-    "breastfeedingWarning": "breastfeedingWarning",
-    "dosageForm": "dosageForm",
-    "doseSchedule": "doseSchedule",
-    "drugUnit": "drugUnit",
-    "foodWarning": "foodWarning",
-    "interactingDrug": "interactingDrug",
-    "manufacturer": "manufacturer",
-    "nonProprietaryName": "nonProprietaryName",
-    "overdosage": "overdosage",
-    "pregnancyWarning": "pregnancyWarning"
   }
 }
