@@ -365,21 +365,23 @@ border:none;
 
 /**/
 
-#a3:checked ~ .table #results > table > tbody > tr > td tr{transition: .75s ease !important; transform:0;}
+#a3:checked ~ .table #results > table > tbody > tr > td tr{transition: .75s ease !important; transform:0; box-shadow: 0 0 0 1px #ccc}
 
 
 #a3:checked ~ .table #results > table > tbody > tr{position:relative;}
-#a3:checked ~ .table #results > table > tbody > tr > td:after{content:"more info"; box-shadow: 0 0 0 .1em; color:#39c;  cursor:pointer; padding:.5em 1em; background-color:#fff;  position:absolute; left:0; bottom:5rem;}
+#a3:checked ~ .table #results > table > tbody > tr > td:after{content:"up to the second info"; box-shadow: 0 0 0 .1em; color:#39c;  cursor:pointer; padding:.5em 1em; background-color:#fff;  position:absolute; left:0; bottom:5rem;}
 
 #a3:checked ~ .table #results > table > tbody > tr > td tr{opacity:0; transform: translate(1em,0)}
 
+#a3:checked ~ .table #results > table > tbody > tr > td tr{ margin: .2em .2em; font-family:serif; text-transform: uppercase;}
+
+#a3:checked ~ .table #results > table > tbody > tr > td:focus tr{opacity:1; transform: scale(1); font-family:sans-serif; }
+
+
 #a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(3),
 #a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(2),
-#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(1){opacity:1; transform:none;}
+#a3:checked ~ .table #results > table > tbody > tr > td tr:nth-child(1){opacity:1; text-transform:capitalize; margin: 0em;transform:none; box-shadow:none;}
 
-
-
-#a3:checked ~ .table #results > table > tbody > tr > td:focus tr{opacity:1; transform: scale(1)}
 
 #a3:checked ~ .table #results > table > tbody > tr > td:focus:after{opacity:0;}
 #a3:checked ~ .table #results > table > tbody > tr > td:nth-child(2){
