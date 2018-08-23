@@ -5,8 +5,8 @@ var json = null;
 $.ajax({
     'async': false,
     'global': false,
-    'url': "/data/test-data.json",
-//    'url': "http://bigpharm-drug-fuse.cloudapps.rhdemo.io/bigPharm/drug/all",
+//    'url': "/data/test-data.json",
+    'url': "http://bigpharm-drug-fuse.cloudapps.rhdemo.io/bigPharm/drug/all",
     'dataType': "json",
     'success': function (data) {
         json = data;

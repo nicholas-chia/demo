@@ -518,3 +518,5 @@ label[for="lock"]{    position: fixed;
 
 
 #lock:not(:checked) ~ section td{pointer-events:none;}
+
+#lock{z-index:-1; opacity:0;}
