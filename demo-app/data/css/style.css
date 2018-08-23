@@ -370,7 +370,7 @@ border:none;
 
 
 #a3:checked ~ .table #results > table > tbody > tr{position:relative;}
-#a3:checked ~ .table #results > table > tbody > tr > td:after{content:"up to the second info"; box-shadow: 0 0 0 .1em; color:#39c;  cursor:pointer; padding:.5em 1em; background-color:#fff;  position:absolute; left:0; bottom:5rem;}
+#a3:checked ~ .table #results > table > tbody > tr > td:after{content:"up to the second info"; box-shadow: 0 0 0 .1em; color:#39c;  cursor:pointer; padding:.5em 1em; background-color:#fff;  position:absolute; left:0; bottom:5rem; pointer-events: initial !important; user-select:none}
 
 #a3:checked ~ .table #results > table > tbody > tr > td tr{opacity:0; transform: translate(1em,0)}
 
