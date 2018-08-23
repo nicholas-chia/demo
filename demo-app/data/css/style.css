@@ -370,7 +370,7 @@ border:none;
 
 
 #a3:checked ~ .table #results > table > tbody > tr{position:relative;}
-#a3:checked ~ .table #results > table > tbody > tr > td:after{content:"up to the second info"; box-shadow: 0 0 0 .1em; color:#39c;  cursor:pointer; padding:.5em 1em; background-color:#fff;  position:absolute; left:0; bottom:5rem; pointer-events: initial !important; user-select:none}
+#a3:checked ~ .table #results > table > tbody > tr > td:after{content:"up to the second info"; box-shadow: 0 0 0 .1em, inset 0 0 0 transparent; color:#39c;  cursor:pointer; padding:.5em 1em; background-color:#fff;  position:absolute; left:0; bottom:5rem; pointer-events: initial !important; user-select:none; }
 
 #a3:checked ~ .table #results > table > tbody > tr > td tr{opacity:0; transform: translate(1em,0)}
 
@@ -378,6 +378,13 @@ border:none;
 
 #a3:checked ~ .table #results > table > tbody > tr > td:focus tr{opacity:1; transform: scale(1); font-family:sans-serif; }
 
+
+#a3:checked ~ .table #results > table > tbody > tr > td:focus:after{opacity:1; transform: scale(1); font-family:sans-serif; animation: fakeload .6s linear forwards}
+
+@keyframes fakeload{
+  0%{transform:scale(1.2); opacity:1;   color:#39c; color:transparent }
+  100%{box-shadow: 0 0 0 .1em #39c, inset 0 -3em 0 #39c; }
+}
 
 #a3:checked ~ .table #results > table table{width: 70%;}
 
