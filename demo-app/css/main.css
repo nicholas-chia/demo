@@ -1,5 +1,6 @@
 /*# sourceURL=css/main.css */
 /*@ sourceURL=css/main.css */
+/*@ sourceURL=css/main.css */
 * {
   box-sizing: border-box;
   user-select: none;
@@ -23,7 +24,7 @@ body {
   z-index: 9;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
   border: 0;
   background-color: transparent;
   width: 8rem;
@@ -807,12 +808,12 @@ section>p {
 
 [name="script"]:not(:checked) ~ div svg{opacity:0;   transform: scale(2); transition:none}
  
-.briefing-block svg{position:absolute; top: 0 ; max-height: 100%;  right:0; width: 16em;  transition: all 3s ease;}
+.briefing-block svg{position:absolute; top: 0 ; max-height: 100%;  right:0; width: 30%;  transition: all 3s ease;}
 
 .script h4{margin:0; font-size: 2em;}
 
 
-.fact{display:inline-block;  width: 27%;  vertical-align:top; margin-bottom:2em; color:#fff}
+.fact{display:inline-block;  width: 25%;  vertical-align:top; margin-bottom:2em; color:#fff}
 .fact{font-weight: 600; text-transform:uppercase} 
 .fact h4{ font-size: 3em; font-weight: 300;}
 
@@ -820,10 +821,11 @@ section>p {
 
 #d-script-2:not(:checked)~section .briefing-block g circle{opacity:0; stroke-width: 15px; transition: all 1s ease !important;}
 
-
+.briefing-block g {transition: all 1s ease;}
+#d-script-2:not(:checked)~section .briefing-block g {transition: all 1s ease; opacity:0}
 .fact em{display:none}
 
-#d-script-2:checked~section .briefing-block .fact em{display:inline; color: #0079c4; font-style:normal;}
+#d-script-2:checked~section .briefing-block .fact em{display:inline; color: #fff; font-style:normal;}
 #d-script-2:checked~section .briefing-block .fact span{display:none}
 
 #d-script-2:checked~section .briefing-block g circle{ opacity:1; transition: all 2s ease .35s !important}
@@ -877,4 +879,16 @@ input:not(:checked) + label .discount{display:none}
 
 [name="script"]:not(:checked) ~ div .cta-b{opacity:0;}
 
-.cta-b{text-align:center; box-shadow: inset 0 0 0 .06em #d25; color:#d25;  padding: 1em; margin:0; font-size: 1.25em; transition: all 1s ease 1s;}
+.cta-b{text-align:center; box-shadow: inset 0 0 0 .06em #d25; color:#d25;  padding: 1em; margin:0; font-size: 1.25em; transition: all 1s ease 1s; width: 66%}
+
+.briefing-block > div:before{content:""; display:block; overflow:hidden; background-color:#7ce; width: 5em; right:50%; top:50%; border-radius:50%; height:5em; position:absolute; z-index:1; opacity:0;  }
+
+
+
+#d-script-2:checked~section .briefing-block > div:before{animation: pulseit 1s linear forwards}
+
+@keyframes pulseit {
+  0%{}
+  50%{opacity:.5;}
+  100%{transform:scale(19); opacity:0;}
+}
